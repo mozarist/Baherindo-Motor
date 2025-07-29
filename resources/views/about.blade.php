@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Welcome to Baherindo Motor')
+@section('title', 'Baherindo Motor')
 
 @section('content')
 

@@ -13,7 +13,7 @@
 
 
     <li>
-        <a href="home" class="hover:text-red-600 font-semibold flex gap-2 items-center">
+        <a href="/home" class="hover:text-red-600 font-semibold flex gap-2 items-center">
             <svg xmlns="http://www.w3.org/2000/svg" class="size-4" fill="currentColor"
                 viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                 <path
@@ -22,7 +22,7 @@
             Home</a>
     </li>
     <li>
-        <a href="about" class="hover:text-red-600 font-semibold flex gap-2 items-center">
+        <a href="/about" class="hover:text-red-600 font-semibold flex gap-2 items-center">
             <svg xmlns="http://www.w3.org/2000/svg" class="size-4" fill="currentColor"
                 viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                 <path
@@ -31,7 +31,7 @@
             About</a>
     </li>
     <li>
-        <a href="contact" class="hover:text-red-600 font-semibold flex gap-2 items-center">
+        <a href="/contact" class="hover:text-red-600 font-semibold flex gap-2 items-center">
             <svg xmlns="http://www.w3.org/2000/svg" class="size-4" fill="currentColor"
                 viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                 <path
