@@ -17,6 +17,10 @@
         <input type="text" name="nama_motor" class="mt-1 py-2 w-full border-b border-gray-300" placeholder="Contoh: Honda Beat">
       </div>
 
+      <div>
+        <label class="block text-base font-semibold">Foto</label>
+        <input type="file" name="img" class="mt-1 py-2 w-full border-b border-gray-300 text-zinc-500">
+      </div>
     
       <div>
         <label class="block text-base font-semibold">Tahun Motor</label>

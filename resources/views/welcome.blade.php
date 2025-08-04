@@ -4,6 +4,7 @@
 
 @section('content')
     <div class="space-y-2">
+        
         <h1 class="text-5xl font-semibold text-center flex gap-3 items-center justify-self-center">Welcome to <span
                 class="flex gap-2 items-center bg-gradient-to-t from-red-950 to-red-500 bg-clip-text text-transparent w-fit">Baherindo
                 Motor
@@ -33,16 +34,16 @@
                 <div class="grid grid-cols-5 gap-5">
 
                     @foreach ($motor as $m)
-                        <div class="bg-white w-full h-fit border border-zinc-400 rounded-xl shadow-md">
-                            <img src="{{ $m['img'] }}" alt=""
+                        <div class="bg-white w-full h-fit border border-zinc-400 rounded-xl shadow-md hover:scale-105 transition">
+                            <img src="{{ $m['gambar_motor'] }}" alt="motor img"
                                 class="w-full aspect-square object-cover bg-zinc-300 rounded-t-xl">
                             <div class="p-5 flex flex-col gap-5">
                                 <div>
-                                    <h5 class="text-xl font-semibold text-red-500">{{ $m['name'] }} <span
-                                            class="text-black text-base">({{ $m['year'] }})</span></h5>
-                                    <p class="font-semibold">{{ $m['km'] }}km</p>
+                                    <h5 class="text-xl font-semibold text-red-500">{{ $m['nama_motor'] }} <span
+                                            class="text-black text-base">({{ $m['tahun_motor'] }})</span></h5>
+                                    <p class="font-semibold">{{ $m['km_motor'] }}km</p>
                                 </div>
-                                <h5 class="text-xl font-semibold">{{ $m['price'] }},00 Rp</h5>
+                                <h5 class="text-xl font-semibold">{{ $m['harga_motor'] }} Rp</h5>
                             </div>
                         </div>
                     @endforeach

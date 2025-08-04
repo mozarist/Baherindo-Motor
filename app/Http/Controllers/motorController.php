@@ -5,15 +5,14 @@ namespace App\Http\Controllers;
 use App\Models\MotorBaherindo;
 use Illuminate\Http\Request;
 
-class welcomeController extends Controller
+class motorController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $motor = MotorBaherindo::all();
-        return view('welcome', compact('motor'));
+        return view('motor.create');
     }
 
     /**
@@ -29,7 +28,16 @@ class welcomeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            "nama_motor" => "required|string",
+            "harga_motor" => "required|numeric",
+            "km_motor" => "required|integer",
+            "tahun_motor" => "required|integer",
+            "gambar_motor" => "required|image|mimes:jpg,jpeg,png"
+        ]);
+
+        MotorBaherindo::create($request->all());
+        return redirect('/');
     }
 
     /**
