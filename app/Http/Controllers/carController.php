@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\MotorBaherindo;
+use App\Models\Mobil;
 use Illuminate\Http\Request;
 
-class motorController extends Controller
+class carController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('motor.create');
+        $mobil = Mobil::all();
+        return view('car', compact('mobil'));
     }
 
     /**
@@ -28,24 +29,7 @@ class motorController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            "nama_motor" => "required|string",
-            "harga_motor" => "required|numeric",
-            "km_motor" => "required|integer",
-            "tahun_motor" => "required|integer",
-            "gambar_motor" => "required|image|mimes:jpg,jpeg,png"
-        ]);
-
-        if ($request->hasFile('gambar_motor')){
-            $path = $request->file('gambar_motor')->store('images','public');
-            $validatedData['gambar_motor'] = $path;
-        }
-        else (
-            $validatedData['gambar_motor'] = null
-        );
-
-        MotorBaherindo::create($validatedData);
-        return redirect('/');
+        //
     }
 
     /**

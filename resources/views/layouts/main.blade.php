@@ -11,7 +11,7 @@
     
     @include('layouts.navbar')
 
-    <div class="px-25 pt-30 space-y-15">
+    <div class="px-25 py-25 space-y-15">
         @yield('content')
     </div>
 

@@ -2,23 +2,23 @@
 
 @section('title', 'Welcome to Baherindo Motor')
 
+<div
+    class="bg-gradient-to-tr from-zinc-300 to-white
+    bg-cover bg-center h-1/3 w-full mt-13 flex flex-col gap-4 justify-center align-center">
+    <h1 class="text-5xl text-black font-semibold text-center">
+        Welcome to <span
+            class="bg-gradient-to-t from-red-950 to-red-500 bg-clip-text text-transparent inline-block">Baherindo
+            Motor</span>
+    </h1>
+    <p class="text-center text-xl text-zinc-900">
+        Jual beli motor second termurah di Cianjur
+    </p>
+</div>
+
 @section('content')
     <div class="space-y-2">
-        
-        <h1 class="text-5xl font-semibold text-center flex gap-3 items-center justify-self-center">Welcome to <span
-                class="flex gap-2 items-center bg-gradient-to-t from-red-950 to-red-500 bg-clip-text text-transparent w-fit">Baherindo
-                Motor
-                <svg xmlns="http://www.w3.org/2000/svg" class="size-12 text-red-950" fill="currentColor"
-                    viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                    <path
-                        d="M190.1 379.1C190.1 405 168.9 426.2 143 426.2C117.1 426.2 96 405 96 379.1C96 353.2 117.2 332 143.1 332L190.2 332L190.2 379.1zM213.8 379.1C213.8 353.2 235 332 260.9 332C286.8 332 308 353.2 308 379.1L308 496.9C308 522.8 286.8 544 260.9 544C235 544 213.8 522.8 213.8 496.9L213.8 379.1zM260.9 190.1C235 190.1 213.8 168.9 213.8 143C213.8 117.1 235 96 260.9 96C286.8 96 308 117.2 308 143.1L308 190.2L260.9 190.2zM260.9 213.8C286.8 213.8 308 235 308 260.9C308 286.8 286.8 308 260.9 308L143.1 308C117.2 308 96 286.8 96 260.9C96 235 117.2 213.8 143.1 213.8L260.9 213.8zM449.9 260.9C449.9 235 471.1 213.8 497 213.8C522.9 213.8 544 235 544 260.9C544 286.8 522.8 308 496.9 308L449.8 308L449.8 260.9zM426.2 260.9C426.2 286.8 405 308 379.1 308C353.2 308 332 286.8 332 260.9L332 143.1C332 117.2 353.2 96 379.1 96C405 96 426.2 117.2 426.2 143.1L426.2 260.9zM379.1 449.9C405 449.9 426.2 471.1 426.2 497C426.2 522.9 405 544 379.1 544C353.2 544 332 522.8 332 496.9L332 449.8L379.1 449.8zM379.1 426.2C353.2 426.2 332 405 332 379.1C332 353.2 353.2 332 379.1 332L496.9 332C522.8 332 544 353.2 544 379.1C544 405 522.8 426.2 496.9 426.2L379.1 426.2z" />
-                </svg>
-            </span></h1>
-        <p class="text-center text-xl">
-            Jual beli motor second termurah di Cianjur
-        </p>
 
-        <div class="py-10 justify-self-center">
+        <div class="justify-self-center space-y-20">
 
             <div class="space-y-10">
                 <h6
@@ -34,8 +34,9 @@
                 <div class="grid grid-cols-5 gap-5">
 
                     @foreach ($motor as $m)
-                        <div class="bg-white w-full h-fit border border-zinc-400 rounded-xl shadow-md hover:scale-105 transition">
-                            <img src="{{ $m['gambar_motor'] }}" alt="motor img"
+                        <div
+                            class="bg-white w-full h-fit border border-zinc-400 rounded-xl shadow-md hover:scale-105 transition">
+                            <img src="{{ asset('storage/' . $m['gambar_motor']) }}" alt="motor img"
                                 class="w-full aspect-square object-cover bg-zinc-300 rounded-t-xl">
                             <div class="p-5 flex flex-col gap-5">
                                 <div>
