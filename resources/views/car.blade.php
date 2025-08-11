@@ -2,21 +2,8 @@
 
 @section('title', 'Welcome to Baherindo Motor')
 
-<div
-    class="bg-gradient-to-tr from-zinc-300 to-white
-    bg-cover bg-center h-1/3 w-full mt-13 flex flex-col gap-4 justify-center align-center">
-    <h1 class="text-5xl text-black font-semibold text-center">
-        Welcome to <span
-            class="bg-gradient-to-t from-red-950 to-red-500 bg-clip-text text-transparent inline-block">Baherindo
-            Motor</span>
-    </h1>
-    <p class="text-center text-xl text-zinc-900">
-        Jual beli motor second termurah di Cianjur
-    </p>
-</div>
-
 @section('content')
-    <div class="space-y-2">
+    <div class="space-y-2 mt-25">
 
         <div class="justify-self-center space-y-20">
 

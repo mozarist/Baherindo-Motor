@@ -3,7 +3,7 @@
 @section('title', 'Baherindo Motor')
 
 @section('content')
-    <div class="space-y-5 pt-20">
+    <div class="space-y-5 pt-10">
         <h1 class="text-5xl font-semibold text-center">Hubungi <span
                 class="bg-gradient-to-t from-red-950 to-red-500 bg-clip-text text-transparent inline-block border-b-3 border-red-800">Kami</span>
         </h1>

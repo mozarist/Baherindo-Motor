@@ -23,7 +23,7 @@
 </div>
 
 @section('content')
-    <div class="space-y-2">
+    <div class="space-y-2 -top-30 relative">
 
         <div class="space-y-20">
 
@@ -59,8 +59,6 @@
                             </div>
                         </a>
                     @endforeach
-
-                    
 
                 </div>
             </div>
