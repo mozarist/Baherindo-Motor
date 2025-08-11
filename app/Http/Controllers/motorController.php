@@ -53,7 +53,8 @@ class motorController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $motor = motorBaherindo::findOrFail($id);
+        return view('motor.show', compact('motor'));
     }
 
     /**
@@ -61,7 +62,8 @@ class motorController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $motor = motorBaherindo::findOrFail($id);
+        return view('motor.edit', compact('motor'));
     }
 
     /**
@@ -69,7 +71,24 @@ class motorController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $motor = MotorBaherindo::findOrFail($id);
+
+        $validatedData = $request->validate([
+            'nama_motor' => 'required|string|max:255',
+            'harga_motor' => 'required|numeric',
+            'tahun_motor' => 'required|integer',
+            'km_motor' => 'required|integer',
+            'gambar_motor' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+        ]);
+        
+        if ($request->hasFile('gambar_motor')) {
+            $path = $request->file('gambar_motor')->store('motor_images', 'public');
+            $validatedData['gambar_motor'] = $path;
+        }
+        
+        $motor->update($validatedData);
+        return redirect("/");
+        
     }
 
     /**
@@ -77,6 +96,8 @@ class motorController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $motor = MotorBaherindo::findOrFail($id);
+        $motor->delete();
+        return redirect('/');
     }
 }

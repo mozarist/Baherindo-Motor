@@ -7,11 +7,11 @@
     <title>@yield('title', 'Baherindo Motor')</title>
     @vite('resources/css/app.css')
 </head>
-<body class="bg-zinc-100 text-black font-[poppins] flex flex-col gap-10 justify-between min-h-screen">
+<body class="bg-white text-black font-[poppins] flex flex-col gap-10 justify-between min-h-screen">
     
     @include('layouts.navbar')
 
-    <div class="px-25 py-25 space-y-15">
+    <div class="px-25 py-5 space-y-15">
         @yield('content')
     </div>
 

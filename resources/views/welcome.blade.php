@@ -3,26 +3,33 @@
 @section('title', 'Welcome to Baherindo Motor')
 
 <div
-    class="bg-gradient-to-tr from-zinc-300 to-white
-    bg-cover bg-center h-1/3 w-full mt-13 flex flex-col gap-4 justify-center align-center">
-    <h1 class="text-5xl text-black font-semibold text-center">
-        Welcome to <span
-            class="bg-gradient-to-t from-red-950 to-red-500 bg-clip-text text-transparent inline-block">Baherindo
-            Motor</span>
-    </h1>
-    <p class="text-center text-xl text-zinc-900">
-        Jual beli motor second termurah di Cianjur
-    </p>
+    class="bg-gradient-to-tr from-zinc-300 to-white bg-cover bg-center h-[50vh] w-full flex gap-4 justify-between items-center overflow-hidden">
+    <div class="flex flex-col gap-4">
+
+        <h1 class="text-5xl text-black font-semibold ps-25">
+            Welcome to
+            <br><span
+                class="bg-gradient-to-t from-red-950 to-red-500 bg-clip-text text-transparent text-7xl inline-block">Baherindo
+                Motor</span>
+        </h1>
+        <p class="text-2xl text-zinc-900 ps-25">
+            Jual beli motor second termurah di Cianjur
+        </p>
+    </div>
+
+    <img src="{{ asset('asset/harley-davidson-rEPAjhzt7TY-unsplash-Photoroom.png') }}" alt=""
+        class="object-cover w-1/2 h-3/2">
+
 </div>
 
 @section('content')
     <div class="space-y-2">
 
-        <div class="justify-self-center space-y-20">
+        <div class="space-y-20">
 
             <div class="space-y-10">
                 <h6
-                    class="flex gap-4 items-center text-4xl font-semibold text-center justify-self-center bg-gradient-to-t from-red-950 to-red-500 bg-clip-text text-transparent">
+                    class="flex gap-4 items-center text-start text-4xl font-semibold bg-gradient-to-t from-red-950 to-red-500 bg-clip-text text-transparent">
                     Beli motor
                     <svg xmlns="http://www.w3.org/2000/svg" class="size-9 text-red-950" fill="currentColor"
                         viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
@@ -34,20 +41,26 @@
                 <div class="grid grid-cols-5 gap-5">
 
                     @foreach ($motor as $m)
-                        <div
-                            class="bg-white w-full h-fit border border-zinc-400 rounded-xl shadow-md hover:scale-105 transition">
+                        <a href="{{ route('motor.show', $m->id) }}"
+                            class="bg-white w-full h-fit border border-zinc-400 rounded-xl hover:shadow-md hover:scale-105 transition">
                             <img src="{{ asset('storage/' . $m['gambar_motor']) }}" alt="motor img"
                                 class="w-full aspect-square object-cover bg-zinc-300 rounded-t-xl">
                             <div class="p-5 flex flex-col gap-5">
                                 <div>
-                                    <h5 class="text-xl font-semibold text-red-500">{{ $m['nama_motor'] }} <span
-                                            class="text-black text-base">({{ $m['tahun_motor'] }})</span></h5>
-                                    <p class="font-semibold">{{ $m['km_motor'] }}km</p>
+                                    <h5 class="flex flex-col text-xl font-semibold text-red-500 truncate">{{ $m['nama_motor'] }}
+                                    </h5>
+                                    <div class="flex gap-2">
+                                        <span class="text-black text-base font-semibold">({{ $m['tahun_motor'] }})</span>
+                                        |
+                                        <p class="font-semibold">{{ $m['km_motor'] }}km</p>
+                                    </div>
                                 </div>
                                 <h5 class="text-xl font-semibold">{{ $m['harga_motor'] }} Rp</h5>
                             </div>
-                        </div>
+                        </a>
                     @endforeach
+
+                    
 
                 </div>
             </div>
