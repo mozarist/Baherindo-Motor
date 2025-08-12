@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\MotorBaherindo;
-use App\Models\Mobil;
 use Illuminate\Http\Request;
 
-class welcomeController extends Controller
+class BikeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,7 @@ class welcomeController extends Controller
     public function index()
     {
         $motor = MotorBaherindo::all();
-        $mobil = Mobil::all();
-        return view('welcome', compact('motor', 'mobil'));
+        return view('bike', compact('motor'));
     }
 
     /**

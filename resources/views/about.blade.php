@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="flex gap-15 self-center py-20">
+    <div class="flex gap-15 self-center pt-20 xl:pt-50">
         <div class="space-y-15">
             <h1 class="text-5xl font-semibold">Tentang <span
                 class="bg-gradient-to-t from-red-950 to-red-500 bg-clip-text text-transparent inline-block border-b-3 border-red-800">Baherindo

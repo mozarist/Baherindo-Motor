@@ -3,7 +3,7 @@
 @section('title', 'Baherindo Motor')
 
 @section('content')
-    <div class="space-y-5 pt-10">
+    <div class="space-y-5 pt-25 xl:pt-50">
         <h1 class="text-5xl font-semibold text-center">Hubungi <span
                 class="bg-gradient-to-t from-red-950 to-red-500 bg-clip-text text-transparent inline-block border-b-3 border-red-800">Kami</span>
         </h1>
@@ -13,7 +13,7 @@
             cepat!
         </p>
     </div>
-    <div class="my-15 grid grid-cols-2 gap-5 px-40">
+    <div class="my-15 grid grid-cols-1 lg:grid-cols-2 gap-5 xl:px-40">
 
         <div class="bg-white p-5 rounded-xl border border-zinc-400 space-y-2">
             <h5 class="text-3xl font-semibold">
